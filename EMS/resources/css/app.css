@@ -1,0 +1,154 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --app-icon-color: #0a6373;
+    --app-icon-color-40: #0a637392;
+    --app-icon-color-bright: #33c6bc;
+    --app-noti-alert: #F84F31;
+    --app-noti: #009779;
+    --btn-coin-bg: #e9ad03;
+    --app-text-warn: #e67f26;
+    --color-primary: #d1d5db;
+    --dark: #1f2937;
+    --color-green-tea: #29ba82;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+  background-color: none;
+}
+::-webkit-scrollbar-track{
+  background-color: none;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: var(--color-primary);
+}
+
+@font-face {
+    font-family: 'system';
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow: overlay;
+}
+body , body * {
+    font-family: 'system';
+}
+svg.def-icon path{
+    stroke:  #0a6373;
+    stroke-width: 2;
+}
+.icon-primary{
+    color: var(--app-icon-color);
+    stroke: var(--app-icon-color);
+}
+.container{
+    width: 900px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+.h-header-div{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1px;
+    background-color: var(--app-icon-color);
+    width: 100%;
+    z-index: -1;
+}
+.post-ref{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header{
+    z-index: 99;
+}
+
+/* animations */
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.25s ease-out;
+}
+
+.slide-up-enter-from {
+  opacity: 0;
+  transform: translateY(-60px);
+  margin-top: -60px;
+}
+
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+  margin-top: 30px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* buttons */
+.btn{
+  background-color: var(--app-icon-color);
+  color: var(--color-primary);
+}
+.btn.billing{
+  background-color: var(--btn-coin-bg);
+}
+.btn.primary{
+  background-color: var(--color-primary);
+  color: var(--dark);
+}
+.btn.lg-green{
+  background-color: var(--app-icon-color-bright);
+}
+.btn:hover{
+  opacity: .7;
+}
+.btn.opt-40{
+  background-color: var(--app-icon-color-40);
+}
+.icon-text-primary{
+  color: var(--app-icon-color);
+}
+.icon-text-warn{
+  color: var(--app-text-warn);
+}
+.icon-green-tea{
+  stroke: var(--color-green-tea);
+}
+
+.pop-noti{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.pop-noti.alert{
+  background-color: var(--app-noti-alert);
+  box-shadow: 0 0 5px rgba(236, 8, 8, 0.8);
+}
+.pop-noti.normal{
+  background-color: var(--app-noti);
+  box-shadow: 0 0 5px rgba(3, 92, 81, 0.748);
+}
