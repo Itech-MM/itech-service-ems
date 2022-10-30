@@ -2,9 +2,9 @@
     <div class="lg:w-[25%] md:w-[30%] fixed h-full p-4">
         <DashboardMenuWidget></DashboardMenuWidget>
     </div>
-    <div class="lg:w-[75%] md:w-[70%] h-[800px] min-h-[100vh]  flex ml-[25%] relative">
+    <div class="lg:w-[75%] md:w-[70%] min-h-[100vh] flex flex-col ml-[25%] relative">
         <div class="w-[inherit] fixed px-2 top-4 z-50">
-            <div class="w-full backdrop-blur-sm bg-gray-300/30 rounded-lg flex items-center justify-between p-2">
+            <div class="w-full backdrop-blur-sm bg-gray-300/30 rounded-lg flex items-center justify-between p-2 shadow">
                 <BreadcrumbWidget></BreadcrumbWidget>
                 <div class="flex items-center">
                     <button class="btn mx-1 primary w-8 h-8 flex items-center justify-center rounded-full">
@@ -49,208 +49,16 @@
                 </div>
             </div>
         </div>
-        <div class="w-full pt-4 px-4 mt-16 grid grid-cols-4 gap-4 h-[fit-content]">
-            <LightCardWidget :noti="attendanceCardNoti">
-                <template v-slot:body>
-                    <button
-                        class="w-16 h-16 m-2 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="#0a6373" class="w-8 h-8">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
-                        </svg>
-                    </button>
-                    <div class="px-2 flex flex-col">
-                        <h2>Attendance</h2>
-                        <div class="flex items-center">
-                            <button class="flex items-end mr-1">
-                                <span class="w-4 h-6 flex items-center justify-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0a6373" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
-                                </span>
-                                <small>350</small>
-                            </button>
-                            <button class="flex items-end mr-1">
-                                <span class="w-4 h-6 flex items-center justify-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
-                                </span>
-                                <small>250</small>
-                            </button>
-
-                        </div>
-                    </div>
-                </template>
-                <template v-slot:footer>
-                    <small>2022-10-20</small>
-                    <button class="py-1 pl-2 m-1 rounded-lg bg-gray-300 hover:bg-gray-300/50 flex items-center">
-                        <small>90</small>
-                        <span
-                            class="w-6 h-6 flex items-center ml-1 justify-center flex items-center justify-center rounded-full">
-                            <i class="fa-solid fa-percent text-sm text-[#0a6373]"></i>
-                        </span>
-                    </button>
-                </template>
-            </LightCardWidget>
-            <LightCardWidget>
-                <template v-slot:body>
-                    <button
-                        class="w-16 h-16 m-2 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden">
-                        <i class="fa-solid fa-house-laptop text-2xl icon-text-primary"></i>
-                    </button>
-                    <div class="px-2 flex flex-col">
-                        <h2>WFH Records</h2>
-                        <div class="flex items-center">
-                            <button class="flex items-end mr-1">
-                                <span class="w-4 h-6 flex items-center justify-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0a6373" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
-                                </span>
-                                <small>350</small>
-                            </button>
-                            <button class="flex items-end mr-1">
-                                <span class="w-4 h-6 flex items-center justify-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
-                                </span>
-                                <small>50</small>
-                            </button>
-
-                        </div>
-                    </div>
-                </template>
-                <template v-slot:footer>
-                    <small>2022-10-20</small>
-                    <button class="py-1 pl-2 m-1 rounded-lg bg-gray-300 hover:bg-gray-300/50 flex items-center">
-                        <small>4.5</small>
-                        <span
-                            class="w-6 h-6 flex items-center ml-1 justify-center flex items-center justify-center rounded-full">
-                            <i class="fa-solid fa-percent text-sm text-[#0a6373]"></i>
-                        </span>
-                    </button>
-                </template>
-            </LightCardWidget>
-            <LightCardWidget>
-                <template v-slot:body>
-                    <button
-                        class="w-16 h-16 m-2 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden">
-                        <i class="fa-solid fa-person-walking-arrow-right text-2xl icon-text-warn"></i>
-                    </button>
-                    <div class="px-2 flex flex-col">
-                        <h2>Leave Records</h2>
-                        <div class="flex items-center">
-                            <button class="flex items-end mr-1">
-                                <span class="w-4 h-6 flex items-center justify-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0a6373" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
-                                </span>
-                                <small>350</small>
-                            </button>
-                            <button class="flex items-end mr-1">
-                                <span class="w-4 h-6 flex items-center justify-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
-                                </span>
-                                <small>9</small>
-                            </button>
-
-                        </div>
-                    </div>
-                </template>
-                <template v-slot:footer>
-                    <small>2022-10-20</small>
-                    <button class="py-1 pl-2 m-1 rounded-lg bg-gray-300 hover:bg-gray-300/50 flex items-center">
-                        <small>1.25</small>
-                        <span
-                            class="w-6 h-6 flex items-center ml-1 justify-center flex items-center justify-center rounded-full">
-                            <i class="fa-solid fa-percent text-sm text-[#0a6373]"></i>
-                        </span>
-                    </button>
-                </template>
-            </LightCardWidget>
-            <LightCardWidget>
-                <template v-slot:body>
-                    <button
-                        class="w-16 h-16 m-2 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-8 h-8 icon-green-tea">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </button>
-                    <div class="px-2 flex flex-col max-w-[60%]">
-                        <h2 class="truncate">Schedule</h2>
-                        <div class="flex items-center">
-                            <button class="flex items-end mr-1">
-                                <span class="w-4 h-6 flex items-center justify-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0a6373" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
-                                </span>
-                                <small>350</small>
-                            </button>
-                            <button class="flex items-end mr-1">
-                                <span class="w-4 h-6 flex items-center justify-start">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                    </svg>
-                                </span>
-                                <small>250</small>
-                            </button>
-
-                        </div>
-                    </div>
-                </template>
-                <template v-slot:footer>
-                    <small>2022-10-20</small>
-                    <button class="py-1 pl-2 m-1 rounded-lg bg-gray-300 hover:bg-gray-300/50 flex items-center">
-                        <small>Plan</small>
-                        <span
-                            class="w-6 h-6 flex items-center ml-1 justify-center flex items-center justify-center rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-                            </svg>
-
-                        </span>
-                    </button>
-                </template>
-            </LightCardWidget>
-        </div>
+        <DashboardHome></DashboardHome>
     </div>
 </template>
 
 <script setup>
 import DashboardMenuWidget from '../components/UI/Widgets/DashboardMenuWidget.vue';
 import BreadcrumbWidget from '../components/UI/Widgets/BreadcrumbWidget.vue';
-import LightCardWidget from '../components/UI/Widgets/LightCardWidget.vue';
+import DashboardHome from '../components/Screens/DashboardHome.vue';
 
-const attendanceCardNoti = {
-    class: 'normal'
-}
+
 </script>
 <style>
 .main-menu {

@@ -11,13 +11,15 @@
             class="h-5 w-5 text-[#0a6373] ease-in-out duration-300"
           />
         </DisclosureButton>
-        <DisclosurePanel class="py-2 text-sm text-gray-500">
-            <div class="flex flex-col px-1">
-                <div class="w-full p-2 bg-gray-300 mb-1 rounded-lg cursor-pointer hover:bg-[#d1d5db4c]" v-for="child of list.children">
-                    {{child}}
-                </div>
-            </div>
-        </DisclosurePanel>
+        <Transition name="fade">
+          <DisclosurePanel class="py-2 pl-3 text-sm text-gray-500">
+              <div class="flex flex-col px-1">
+                  <div class="w-full p-2 bg-gray-300 mb-1 rounded-lg cursor-pointer hover:bg-[#d1d5db4c]" v-for="child of list.children">
+                      {{child}}
+                  </div>
+              </div>
+          </DisclosurePanel>
+        </Transition>
       </Disclosure>
     </div>
   </div>

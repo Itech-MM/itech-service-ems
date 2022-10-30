@@ -76,16 +76,32 @@
 import AccordionWidget from './AccordionWidget.vue';
 const accordionData = [
     {
-        title: 'Account Managements',
+        title: 'Reports',
+        children: ['Attendance','Leave','Overtime']
+    },
+    {
+        title: 'Employee',
+        children: ['Registration','Requests','Issues']
+    },
+    {
+        title: 'Plans',
+        children: ['Attendance Schedule','Meeting Schedule','Holidays']
+    },
+    {
+        title: 'Organization',
+        children: ['Department Flow','Shift','Issues']
+    },
+    {
+        title: 'Account',
         children: ['Coraborators','Operators','Receptions']
     },
     {
-        title: 'Account Managements',
-        children: ['Coraborators','Operators','Receptions']
+        title: 'System',
+        children: ['Departments','Permissions & Rules','UI Customization']
     },
     {
-        title: 'Account Managements',
-        children: ['Coraborators','Operators','Receptions']
+        title: 'Inqury',
+        children: ['Profile Change','Reports','Feedbacks']
     }
 ]
 </script>
